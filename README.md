@@ -3,7 +3,7 @@
 **Spatial Proximity-Weighted High-resolution Expression Reconstruction**  
 A generalized bin-to-cell mapping framework for high-definition spatial transcriptomics (HD-ST)
 
-![SPHERE Workflow](Figure1_workflow)
+![SPHERE Workflow](Figure1_workflow.pdf)
 
 ---
 
