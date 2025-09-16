@@ -3,7 +3,7 @@
 **Spatial Proximity-Weighted High-resolution Expression Reconstruction**  
 A generalized bin-to-cell mapping framework for high-definition spatial transcriptomics (HD-ST)
 
-![SPHERE Workflow](docs/SPHERE_workflow.svg)
+![SPHERE Workflow](Figure1_workflow)
 
 ---
 
@@ -26,5 +26,7 @@ It is recommended to create a separate Conda environment to avoid dependency con
 conda create -n SPHERE python=3.10 -y
 conda activate SPHERE
 
+Clone this repository:
+```bash
 git clone https://github.com/xiaoxiaoxier/SPHERE.git
 cd SPHERE
