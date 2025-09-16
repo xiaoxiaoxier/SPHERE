@@ -111,7 +111,7 @@ If you use SPHERE in your research, please cite:
 @article{wang2025sphere,
   title={SPHERE: Spatial Proximity-Weighted High-resolution Expression Reconstruction for Visium High-Definition Transcriptomics},
   author={Wang, Zhuo and Li, Shangfu and Zhang, Chiping and Huang, Hsien-Da},
-  journal={Bioinformatics},
+  journal={Bio},
   year={2025}
 }
 ```
