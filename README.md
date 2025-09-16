@@ -40,7 +40,7 @@ Install SPHERE:
 ```bash
 pip install -e .   # Development mode installation
 ```
-🚀 Quick Start
+## 🚀 Quick Start
 ```bash
 from sphere import sphere_assignment, run_clustering
 import pandas as pd, geopandas as gpd
@@ -80,7 +80,7 @@ adata_clustered = run_clustering(pred_sphere)
 
 ```
 
-📂 Data Preparation
+## 📂 Data Preparation
 SPHERE requires three types of inputs:
 
 bin_gdf: bin-aggregated spatial gene expression data (with geometry)
@@ -90,7 +90,7 @@ For a detailed data preparation workflow, see:
 examples/human_crc_prepare_inputs.ipynb
 This notebook demonstrates how to generate the required files from Xenium public datasets.
 
-📊 Downstream Analysis
+## 📊 Downstream Analysis
 run_clustering returns an AnnData object, which can be further analyzed using Scanpy:
 
 Visualization: UMAP plots of clustering results
@@ -102,7 +102,7 @@ import scanpy as sc
 sc.pl.umap(adata_clustered, color='leiden')
 sc.tl.rank_genes_groups(adata_clustered, groupby='leiden', method='t-test')
 sc.pl.rank_genes_groups(adata_clustered, n_genes=10)
-📚 Examples
+## 📚 Examples
 Full data preparation pipeline: examples/human_crc_prepare_inputs.ipynb
 Single patch test: examples/test_patch_clustering.ipynb
 📄 Citation
@@ -115,5 +115,5 @@ If you use SPHERE in your research, please cite:
   year={2025}
 }
 ```
-📜 License
+## 📜 License
 This project is licensed under the MIT License.
