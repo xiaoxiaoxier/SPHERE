@@ -1,0 +1,11 @@
+README.md
+setup.py
+sphere/__init__.py
+sphere/assignment.py
+sphere/clustering.py
+sphere/preprocessing.py
+sphere.egg-info/PKG-INFO
+sphere.egg-info/SOURCES.txt
+sphere.egg-info/dependency_links.txt
+sphere.egg-info/requires.txt
+sphere.egg-info/top_level.txt

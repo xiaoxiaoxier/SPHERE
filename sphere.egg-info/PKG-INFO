@@ -1,0 +1,67 @@
+Metadata-Version: 2.4
+Name: sphere
+Version: 0.1.0
+Summary: SPHERE: Spatial Proximity-Weighted High-resolution Expression Reconstruction for Visium HD
+Home-page: https://github.com/<your-username>/SPHERE
+Author: Your Name
+Author-email: your.email@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy<2.0,>=1.21
+Requires-Dist: pandas<2.2,>=1.4
+Requires-Dist: geopandas<0.15,>=0.12
+Requires-Dist: shapely<2.1,>=2.0
+Requires-Dist: scanpy<1.10,>=1.9
+Requires-Dist: anndata<0.10,>=0.8
+Requires-Dist: matplotlib<3.9,>=3.5
+Requires-Dist: seaborn<0.13,>=0.11
+Requires-Dist: scikit-learn<1.4,>=1.0
+Requires-Dist: tqdm<5.0,>=4.64
+Requires-Dist: zarr<2.17,>=2.12
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# SPHERE
+
+**Spatial Proximity-Weighted High-resolution Expression Reconstruction**  
+A generalized bin-to-cell mapping framework for high-definition spatial transcriptomics (HD-ST)
+
+![SPHERE Workflow](docs/SPHERE_workflow.svg)
+
+---
+
+## 📖 Introduction
+SPHERE is a Python package for bin-to-cell mapping in high-resolution spatial transcriptomics data (e.g., 10x Genomics Visium HD).  
+It implements three mapping strategies:
+- **Naïve** (full containment)
+- **Weighted Area** (weighted by overlapping area)
+- **SPHERE** (overlapping area × spatial proximity weighting)
+
+SPHERE can directly convert bin-level expression matrices and cell segmentation results into a cell × gene expression matrix, enabling downstream clustering and biological analysis.
+
+---
+
+## 🔧 Installation
+
+It is recommended to create a separate Conda environment to avoid dependency conflicts:
+
+```bash
+conda create -n SPHERE python=3.10 -y
+conda activate SPHERE
+
+git clone https://github.com/xiaoxiaoxier/SPHERE.git
+cd SPHERE
