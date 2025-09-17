@@ -40,6 +40,16 @@ Install SPHERE:
 ```bash
 pip install -e .   # Development mode installation
 ```
+## 📂 Data Preparation
+SPHERE requires three types of inputs:
+
+- bin_gdf: bin-aggregated spatial gene expression data (with geometry)
+- cell_gdf: cell segmentation polygon data (with cell_id and geometry)
+- ground truth (optional): real cell × gene expression matrix for evaluation
+For a detailed data preparation workflow, see:
+examples/synthetic_data_Xenium_HumanCRC20250916.ipynb
+This notebook demonstrates how to generate the required files from Xenium public datasets.
+
 ## 🚀 Quick Start
 ```bash
 from sphere import sphere_assignment, run_clustering
@@ -80,15 +90,7 @@ adata_clustered = run_clustering(pred_sphere)
 
 ```
 
-## 📂 Data Preparation
-SPHERE requires three types of inputs:
 
-bin_gdf: bin-aggregated spatial gene expression data (with geometry)
-cell_gdf: cell segmentation polygon data (with cell_id and geometry)
-ground truth (optional): real cell × gene expression matrix for evaluation
-For a detailed data preparation workflow, see:
-examples/human_crc_prepare_inputs.ipynb
-This notebook demonstrates how to generate the required files from Xenium public datasets.
 
 ## 📊 Downstream Analysis
 run_clustering returns an AnnData object, which can be further analyzed using Scanpy:
@@ -97,15 +99,17 @@ Visualization: UMAP plots of clustering results
 Marker gene analysis
 Spatial visualization (with cell coordinates)
 Example:
-
+```bash
 import scanpy as sc
 sc.pl.umap(adata_clustered, color='leiden')
 sc.tl.rank_genes_groups(adata_clustered, groupby='leiden', method='t-test')
 sc.pl.rank_genes_groups(adata_clustered, n_genes=10)
+```
 ## 📚 Examples
 Full data preparation pipeline: examples/human_crc_prepare_inputs.ipynb
 Single patch test: examples/test_patch_clustering.ipynb
-📄 Citation
+
+## 📄 Citation
 If you use SPHERE in your research, please cite:
 ```
 @article{wang2025sphere,
