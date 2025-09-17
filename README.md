@@ -106,8 +106,17 @@ sc.tl.rank_genes_groups(adata_clustered, groupby='leiden', method='t-test')
 sc.pl.rank_genes_groups(adata_clustered, n_genes=10)
 ```
 ## 📚 Examples
-Full data preparation pipeline: examples/human_crc_prepare_inputs.ipynb
-Single patch test: examples/test_patch_clustering.ipynb
+
+The `examples/` folder contains Jupyter notebooks demonstrating SPHERE on both **synthetic data** and **real Visium HD data**:
+
+### 🧪 Synthetic Data (Simulation)
+- [`SPHERE_HumanCRC20250905.ipynb`](examples/SPHERE_HumanCRC20250905.ipynb) — Human colorectal cancer dataset (synthetic)
+- [`SPHERE_mousebrain20250912.ipynb`](examples/SPHERE_mousebrain20250912.ipynb) — Mouse brain dataset (synthetic)
+- [`synthetic_data_Xenium_HumanCRC20250916.ipynb`](examples/synthetic_data_Xenium_HumanCRC20250916.ipynb) — Example of data preparation from 10x Genomics Xenium public dataset
+
+### 🧬 Real Data (Visium HD)
+- [`SPHERE_realdata_HumanCRC20250901.ipynb`](examples/SPHERE_realdata_HumanCRC20250901.ipynb) — Reproduction of paper results on human colorectal cancer (real Visium HD data)
+- [`SPHERE_realdata_Mousebrain20250827.ipynb`](examples/SPHERE_realdata_Mousebrain20250827.ipynb) — Reproduction of paper results on mouse brain (real Visium HD data)
 
 ## 📄 Citation
 If you use SPHERE in your research, please cite:
